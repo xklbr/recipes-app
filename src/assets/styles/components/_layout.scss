@@ -1,0 +1,65 @@
+.layout {
+  &__recipes {
+    &__title-section {
+      @include fonts($color-primary, $font-main, 54, 65);
+      text-align: center;
+      text-transform: capitalize;
+      margin: rem(28) 0 rem(20);
+    }
+    &__item-container {
+      margin-top: rem(80);
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      justify-items: center;
+    }
+    &__card-container {
+      height: rem(250);
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .layout {
+    &__recipes {
+      &__title-section {
+        font-size: rem(54);
+        line-height: rem(65);
+        margin-left: rem(30);
+        text-align: left;
+      }
+      &__item-container {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        justify-items: center;
+      }
+      &__card-container {
+        height: rem(350);
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .layout {
+    &__recipes {
+      &__title-section {
+        font-size: rem(67);
+        line-height: rem(80);
+        margin-left: rem(50);
+        text-align: left;
+      }
+      &__item-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, auto);
+      }
+      &__card-container {
+        height: rem(400);
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.navbar {
+  width: 100%;
+  &__logo {
+    @include fonts($color-black, $font-main, 40, 48);
+    margin-left: rem(50);
+  }
+  &__logo--text {
+    @include fonts($color-primary, $font-regular, 30, 46);
+    margin-left: rem(-11);
+  }
+  &--mobile {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: rem(-40);
+    width: 100%;
+    &__link {
+      @include fonts($color-black, $font-regular, 13, 20);
+      @extend .ui__center-items;
+      background: $bg-primary;
+      border-radius: rem(10);
+      box-shadow: 0 rem(5) rem(9) #8395a766;
+      flex-direction: column;
+      height: rem(92);
+      margin: rem(10) 0;
+      width: rem(114);
+    }
+    &__image {
+      margin-bottom: rem(2);
+    }
+    &__active {
+      color: $color-primary;
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .navbar {
+    &--mobile {
+      &__link {
+        height: rem(85);
+        width: rem(106);
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    align-items: center;
+    background-color: $color-white;
+    box-shadow: $shadow;
+    display: flex;
+    height: rem(69);
+    justify-content: space-between;
+    padding: 0 rem(70);
+    width: 100%;
+    &__link {
+      @include fonts($color-black, $font-regular, 13, 20);
+      margin: 0 rem(28);
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}

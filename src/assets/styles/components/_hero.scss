@@ -1,0 +1,53 @@
+.hero {
+  height: rem(234);
+  position: relative;
+  width: 100%;
+  &__image {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  &__text-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    padding-left: rem(40);
+    width: 100%;
+  }
+  &__title {
+    @include fonts($color-white, $font-regular, 51, 5);
+    &--highlight {
+      @include fonts($color-white, $font-main, 51, 61);
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .hero {
+    height: rem(250);
+    &__text-content {
+      padding-left: rem(121);
+    }
+    &__title {
+      font-size: rem(74);
+      line-height: rem(15);
+      &--highlight {
+        font-size: rem(67);
+        line-height: rem(80);
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    height: rem(468);
+    &__text-content {
+      padding-left: rem(270);
+    }
+  }
+}

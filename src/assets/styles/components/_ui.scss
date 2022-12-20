@@ -1,0 +1,129 @@
+.ui {
+  &__slider-container {
+    height: rem(320);
+  }
+  &__m-0 {
+    margin: 0;
+  }
+
+  &__mx-3 {
+    margin: 0 rem(30);
+  }
+
+  &__mx-7 {
+    margin-left: rem(70);
+    margin-right: rem(70);
+  }
+
+  &__w-100 {
+    width: 100%;
+  }
+
+  &__center-items {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__flex-column {
+    flex-direction: column;
+  }
+
+  &__container {
+    padding: 0 rem(70);
+    margin: 0;
+    width: 100%;
+  }
+
+  &__container-fluid {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  &__btn-main {
+    @include fonts($color-white, $font-regular, 16, 20);
+    background-color: $color-primary;
+    border: none;
+    border-radius: rem(6);
+    cursor: pointer;
+    height: rem(40);
+    width: 100%;
+  }
+
+  &__spinner-container {
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+  }
+  &__spinner-title {
+    @include fonts($color-primary, $font-main, 30, 36);
+  }
+  &__modal-container {
+    @extend .ui__spinner-container;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+  }
+  &__modal {
+    align-items: center;
+    background-color: $color-white;
+    border-radius: rem(6);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    padding: rem(40);
+    position: relative;
+    text-align: center;
+    width: rem(400);
+    &__icon {
+      position: absolute;
+      right: rem(10);
+      top: rem(10);
+      width: rem(25);
+    }
+    &__image-container {
+      @extend .ui__center-items;
+      background-color: #fef3c7;
+      border-radius: 50%;
+      height: rem(60);
+      margin-bottom: rem(10);
+      width: rem(60);
+    }
+    &__image {
+      width: 50%;
+    }
+    &__title {
+      @include fonts($color-black, $font-medium, 20, 24);
+      margin-bottom: rem(10);
+    }
+    &__description {
+      @include fonts($color-black, $font-regular, 16, 22);
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .ui {
+    &__slider-container {
+      height: rem(420);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .ui {
+    &__slider-container {
+      height: rem(450);
+    }
+  }
+}

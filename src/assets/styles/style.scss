@@ -1,0 +1,22 @@
+@import "../../../node_modules/slick-carousel/slick/slick.css";
+@import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+
+// config
+@import "modules/vars";
+@import "modules/app";
+
+// config modules
+@import "modules/mixins";
+@import "modules/typography";
+
+// components
+@import "components/layout";
+@import "components/auth";
+@import "components/ui";
+@import "components/navbar";
+@import "components/header";
+@import "components/hero";
+@import "components/footer";
+@import "components/card";
+@import "components/form";
+@import "components/spinner";
